@@ -1,0 +1,143 @@
+:root{
+    --purple100: hsl(254, 88%, 90%);
+    --purple500: hsl(256, 67%, 59%);
+    --yellow100: hsl(31, 66%, 93%);
+    --yellow500: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+}
+body{
+    background-color: rgb(238, 237, 237);
+}
+p{
+    margin-top: 0;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gridContainer{
+    display: grid;
+    grid-template-areas: 'card1 card2 card2 card3'
+                         'card1 card4 card5 card3'
+                         'card6 card4 card5 card3'
+                         'card6 card7 card8 card8'   ;
+    gap: 20px;
+    max-width: 1000px;
+    /* padding: 20px 90px; */
+    margin: 50px auto;
+    /* box-shadow: 3px 3px 18px grey; */
+
+}
+img{
+    width: 100%;
+}
+.card{
+    border-radius: 10px;
+    padding: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.6em;
+    line-height: 0.9;
+}
+.review-card{
+    background-color: var(--purple500);
+    grid-area: card2;
+    color: var(--white);
+    text-align: center;
+    align-items: center;
+    font-size: 2.2rem;
+}
+.review-card p{
+    margin-bottom: 0;
+}
+.review-card img{
+    width: 140px;
+    margin: 10px 0;
+}
+.account-card{
+    background-color: var(--white);
+    grid-area: card4;
+    justify-content: flex-start;
+}
+.account-card p{
+    margin-top: 30px;
+}
+.schedule-card{
+    background-color: var(--yellow500);
+    grid-area: card5;
+}
+.schedule-card img{
+    width: 77%;
+    margin: -16px auto -12px;
+}
+.media-card{
+    background-color: var(--purple100);
+    grid-area: card3;
+    justify-content: space-around;
+}
+.followers-card{
+    background-color: var(--purple500);
+    grid-area: card8;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+.followers-card img{
+    width: 50%;
+}
+.growth-card{
+    background-color: var(--white);
+    grid-area: card7;
+    justify-content: space-around;
+}
+
+.content-card{
+    background-color: var(--yellow100);
+    grid-area: card1;
+}
+.ai-card{
+    background-color: var(--yellow500);
+    grid-area: card6;
+}
+.purpleText{
+    color: var(--purple500);
+    font-style: italic;
+}
+.yellowText{
+    color: var(--yellow500);
+}
+.font-small{
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+.font-large{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.font-medium{
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .gridContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        font-weight: 500;
+        font-size: 2.3rem;
+    }
+    .media-card{
+        text-align: center;
+    }
+    .media-card img,  .followers-card img{
+        margin-bottom: 25px;
+    }
+    .followers-card{
+        flex-direction: column;
+    }
+    .growth-card img,.content-card img, .ai-card img{
+        width: 60%;
+    }
+}
